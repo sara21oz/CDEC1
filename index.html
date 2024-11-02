@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="younesWEB.css">
+
+    
+    <title>YOUNES WEB</title>
+</head>
+<body>
+    <div class="mortgage">
+      <div class="left">
+        <div class="header">
+            <h2>mortgage calculator</h2>
+            <button id="clear-btn">clear all</button>
+        </div>
+        <form id="formulaire">
+            <div class="form-item">
+                <label class="light-text" for="mortgage-amount">mortgage amount</label>
+            <div class="form-flex" id="mortgage-amount-main">
+                <p class="form-symbol">$</p>
+                <input type="number" id="mortgage-amount" name="mortgage-amount" required>
+
+                </div>
+                <p class="form-alert" id="amount-alert">this field is required</p>
+            </div>
+            <div class="form-item">
+                <div class="form-col">
+                    <div class="form-item">
+                        <label for="mortgage-term" class="light-text">mortgage term</label>
+                        <div class="form-flex" id="mortgage-term-main">
+                            <input type="number" id="mortgage-term" name="mortgage-term" required>
+                            <p class="form-symbol">years</p>
+                        </div>
+                        <p class="form-alert" id="amount-alert">this field is required</p>
+                    </div>
+                    <div class="form-item">
+                        <label for="interest.rate" class="light-text">interest rate</label>
+                        <div class="form-flex" for="interest-rate-main">
+                            <input id="interest-rate" type="number" name="interest-rate" step="0.01" required>
+                            <p class="form-symbol">%</p>
+
+                        </div>
+                        <p class="form-alert" id="amount-alert">this field is required</p>
+                    </div>
+                </div>
+            </div>
+           <div class="form-item">
+            <label class="light-text">mortgage type</label>
+            <div class="radio-input">
+                <input id="repayment" class="remortgage-type" type="radio" name="mortgage-type" value="repayment" required>
+                <label for="repayment">repayment</label>
+            </div>
+
+            <div class="radio-input">
+                <input id="interest-only" class="remortgage-type" type="radio" name="mortgage-type" value="interest-only" required>
+                <label for="interest-only">interest only</label>
+            </div>
+            <p class="form-alert" id="amount-alert">this field is required</p>
+        </div>
+<div class="form-item">
+        </div>
+        <button id="calcul-btn" type="button" class="calcul-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="24"
+                     height="24"><path fill="#133041" d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7
+                          64-64l0-384c0-35.3-28.7-64-64-64L64 0zM96 64l192 0c17.7 0 32 14.3
+                           32 32l0 32c0 17.7-14.3 32-32 32L96 160c-17.7 0-32-14.3-32-32l0-32c0-17.7 
+                           14.3-32 32-32zm32 160a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM96 352a32 32 0 1 1 0-64 32 
+                           32 0 1 1 0 64zM64 416c0-17.7 14.3-32 32-32l96 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-96 0c-17.7 
+                           0-32-14.3-32-32zM192 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1
+                            64 0zm64-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64
+                         0zM288 448a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg>
+                         Calculate Repayments
+        </button>
+     </form>
+   </div>
+   <div class="right">
+     <div id="default-text" class="default-text">
+         <img src="illustration-empty.svg" alt="" height="" width="">
+         <h2>result shown here</h2>
+         <p class="light-text">Complete the form and click "calculate repayments" to see what your monthly repayments would be</p>
+     </div>
+     <div id="calculation-container" class="calculation-container">
+       <h2>your results</h2>
+      <p class="light-text">Your results are shown below based on the information you provided . To adjust the results , edit the form and click"calculaterepayments" again.</p> 
+      <div  class="calculation">
+         <div class="monthly">
+             <p  class="light-text">your monthly repayment</p>
+             <span id="result" class="monthly-result"></span>
+             </div>
+             <div class="line"></div>
+             <div class="total-term">
+                 <p class="light-text">total youAll repay over the term</p>
+                 <span id="term-result" class="term-result"></span>
+             </div>
+      </div>
+     </div>
+   </div>
+ </div>
+ <script src="younesWEB.js"></script>
+</body>
+</html>
